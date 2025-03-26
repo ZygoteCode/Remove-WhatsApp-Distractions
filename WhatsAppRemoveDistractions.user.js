@@ -3,13 +3,13 @@
 // @namespace    http://tampermonkey.net/
 // @version      7.0
 // @description  Remove all the WhatsApp distractions to get concentrated on what's really important
-// @author       GabryB03
+// @author       ZygoteCode
 // @match        https://www.whatsapp.com/*
 // @match        https://whatsapp.com/*
 // @match        https://web.whatsapp.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=whatsapp.com
-// @updateURL    https://github.com/GabryB03/Remove-WhatsApp-Distractions/raw/main/WhatsAppRemoveDistractions.user.js
-// @downloadURL  https://github.com/GabryB03/Remove-WhatsApp-Distractions/raw/main/WhatsAppRemoveDistractions.user.js
+// @updateURL    https://github.com/ZygoteCode/Remove-WhatsApp-Distractions/raw/main/WhatsAppRemoveDistractions.user.js
+// @downloadURL  https://github.com/ZygoteCode/Remove-WhatsApp-Distractions/raw/main/WhatsAppRemoveDistractions.user.js
 // @grant        none
 // ==/UserScript==
 
