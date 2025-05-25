@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WhatsApp Remove Distractions
 // @namespace    http://tampermonkey.net/
-// @version      7.0
+// @version      8.0
 // @description  Remove all the WhatsApp distractions to get concentrated on what's really important
 // @author       ZygoteCode
 // @match        https://www.whatsapp.com/*
@@ -47,7 +47,7 @@
     {
         try
         {
-            document.querySelector("img[src='https://static.whatsapp.net/rsrc.php/v3/y6/r/wa669aeJeom.png']").parentElement.parentElement.remove();
+            document.querySelector("img[src='https://static.whatsapp.net/rsrc.php/v4/y6/r/wa669aeJeom.png']").parentElement.parentElement.remove();
         }
         catch (e)
         {
@@ -56,7 +56,7 @@
 
         try
         {
-            document.querySelector("div[title='Community']").parentElement.parentElement.parentElement.parentElement.parentElement.remove();
+            document.querySelector("span[data-icon='new-chat-outline']").parentElement.parentElement.parentElement.remove();
         }
         catch (e)
         {
@@ -65,7 +65,25 @@
 
         try
         {
-            document.querySelector("div[aria-label='Casella di testo per la ricerca']").parentElement.parentElement.parentElement.parentElement.remove();
+            document.querySelector("header").remove();
+        }
+        catch (e)
+        {
+
+        }
+
+        try
+        {
+            document.querySelector("div[title='Chat']").parentElement.parentElement.parentElement.remove();
+        }
+        catch (e)
+        {
+
+        }
+
+        try
+        {
+            document.querySelector("div[role='tablist']").remove();
         }
         catch (e)
         {
@@ -83,197 +101,7 @@
 
         try
         {
-
-            var element = document.querySelector("div[class='']");
-
-            if (element.innerText == 'Tutte')
-            {
-                 document.querySelector("div[class='']").parentElement.parentElement.parentElement.remove();
-            }
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("div[title='Dettagli profilo']").parentElement.remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("button[aria-label='Cerca o inizia una nuova chat']").parentElement.parentElement.parentElement.remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("button[aria-label='Lista delle chat']").parentElement.parentElement.parentElement.remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("span[data-icon='chats-filled']").parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("span[data-icon='new-chat-outline']").parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("div[title='Info messaggio']").parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("button[aria-label='Archiviate ']").remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            var elements = document.querySelectorAll("div[role='gridcell']");
-
-            for (var i = 0; i < elements.length; i++)
-            {
-                elements[i].remove();
-            }
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.title = "WhatsApp";
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("button[aria-pressed=false]").parentElement.remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            var theElementsToRemove = document.querySelectorAll("[style='visibility: visible;']");
-
-            for (var j = 0; j < theElementsToRemove.length; j++)
-            {
-                theElementsToRemove[j].remove();
-            }
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("div[style='width: 82px; height: 82px;']").parentElement.remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("span[title='YOUR_NAME']").parentElement.remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            var theElementsToRemove = document.querySelectorAll("span[data-icon='default-group']");
-
-            for (var j = 0; j < theElementsToRemove.length; j++)
-            {
-                theElementsToRemove[j].remove();
-            }
-
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            var theElementsToRemove = document.querySelectorAll("span[data-icon='default-user']");
-
-            for (var j = 0; j < theElementsToRemove.length; j++)
-            {
-                theElementsToRemove[j].remove();
-            }
-
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("div[role='tooltip']").parentElement.remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("div[style='height: 100%; transform: translateX(0%);']").parentElement.parentElement.remove();
-        }
-        catch (e)
-        {
-
-        }
-
-        try
-        {
-            document.querySelector("div[role='dialog']").parentElement.remove();
+            document.querySelector("path[d='M5.00847986,1.6 C6.38255462,1.6 7.50937014,2.67435859 7.5940156,4.02703389 L7.59911976,4.1906399 L7.599,5.462 L7.75719976,5.46214385 C8.34167974,5.46214385 8.81591972,5.94158383 8.81591972,6.53126381 L8.81591972,9.8834238 C8.81591972,10.4731038 8.34167974,10.9525438 7.75719976,10.9525438 L2.25767996,10.9525438 C1.67527998,10.9525438 1.2,10.4731038 1.2,9.8834238 L1.2,6.53126381 C1.2,5.94158383 1.67423998,5.46214385 2.25767996,5.46214385 L2.416,5.462 L2.41679995,4.1906399 C2.41679995,2.81636129 3.49135449,1.68973395 4.84478101,1.60510326 L5.00847986,1.6 Z M5.00847986,2.84799995 C4.31163824,2.84799995 3.73624912,3.38200845 3.6709675,4.06160439 L3.6647999,4.1906399 L3.663,5.462 L6.35,5.462 L6.35111981,4.1906399 C6.35111981,3.53817142 5.88169076,2.99180999 5.26310845,2.87228506 L5.13749818,2.85416626 L5.00847986,2.84799995 Z']").parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
         }
         catch (e)
         {
