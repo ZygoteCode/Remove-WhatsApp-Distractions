@@ -108,6 +108,20 @@
 
         }
 
+        try
+        {
+            var elements = document.querySelectorAll("div[style='height: 49px; width: 49px;']");
+
+            for (var i = 0; i < elements.length; i++)
+            {
+                elements[i].parentElement.parentElement.remove();
+            }
+        }
+        catch (e)
+        {
+
+        }
+
         setTimeout(async function()
         {
             await asyncLoop();
