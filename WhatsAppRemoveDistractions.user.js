@@ -122,6 +122,15 @@
 
         }
 
+        try
+        {
+            document.querySelector("div[style='height: 100%; transform: translateX(0%);']").parentElement.parentElement.remove();
+        }
+        catch (e)
+        {
+
+        }
+
         setTimeout(async function()
         {
             await asyncLoop();
